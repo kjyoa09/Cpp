@@ -10,7 +10,8 @@
 
 - 참조자의 참조자, 참조자의 배열, 참조자의 포인터 불가능
 
-    // int& arr[2] = {a,b};
+    int& arr[2] = {a,b}; >> error
+
     int arr[2] = {a,b};
     int (&ref)[2] = arr;
 

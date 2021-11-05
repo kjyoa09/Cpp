@@ -28,3 +28,22 @@ string solution(vector<string> participant, vector<string> completion) {
     }
 
 }
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+string solution(vector<string> participant, vector<string> completion) {
+    string answer = "";
+    sort(participant.begin(), participant.end());
+    return answer; // >> return 없으면 signal: segmentation fault (core dumped) //
+    // sort(completion.begin(), completion.end());
+    // for(int i=0;i<completion.size();i++)
+    // {
+    //     if(participant[i] != completion[i])
+    //         return participant[i];
+    // }
+    // return participant.back();
+    //return answer;
+}

@@ -28,6 +28,13 @@ int main(){
     int arr[2] = {a,b};
     int (&ref)[2] = arr;
 
-    // cout << arr[0] << arr[1] << endl;
+    cout << &a << endl; //0x61ff08
+    cout << &arr[0] << endl; //0x61fefc
+    cout << &ref[0] << endl;//0x61fefc
+
+    cout << &b << endl; //0x61ff04
+    cout << &arr[1] << endl;//0x61ff00
+    cout << &ref[1] << endl;//0x61ff00
+
     return 0;
 }

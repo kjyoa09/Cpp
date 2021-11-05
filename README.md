@@ -34,6 +34,8 @@
 
     Case3 : 함수 지역변수를 외부에서 레퍼런스로 받기 >> 가능(다만 const 참조자로 받아야함) 
 
+'''
+
     int ftn(){
         int a = 3;
         
@@ -47,6 +49,8 @@
         cout << &b << endl; // 0x61ff08
         // cout << sizeof(a) << endl; >> error
     }
+
+'''
 
 2. 참조자 vs 포인터
 

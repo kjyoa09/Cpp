@@ -23,7 +23,7 @@
     cout << &b << endl; //0x61ff04
     cout << &arr[1] << endl;//0x61ff00
     cout << &ref[1] << endl;//0x61ff00
-    `\
+    \`
 - 레퍼런스 리턴하는 함수
 
     Case1 : 외부 변수를 받아서 레퍼런스 리턴 >> 가능

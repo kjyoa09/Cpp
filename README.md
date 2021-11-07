@@ -12,18 +12,18 @@
 
 
 
-    int& arr[2] = {a,b}; >> error
+        int& arr[2] = {a,b}; >> error
 
-    int arr[2] = {a,b};
-    int (&ref)[2] = arr;
+        int arr[2] = {a,b};
+        int (&ref)[2] = arr;
 
-    cout << &a << endl; //0x61ff08
-    cout << &arr[0] << endl; //0x61fefc
-    cout << &ref[0] << endl;//0x61fefc
+        cout << &a << endl; //0x61ff08
+        cout << &arr[0] << endl; //0x61fefc
+        cout << &ref[0] << endl;//0x61fefc
 
-    cout << &b << endl; //0x61ff04
-    cout << &arr[1] << endl;//0x61ff00
-    cout << &ref[1] << endl;//0x61ff00
+        cout << &b << endl; //0x61ff04
+        cout << &arr[1] << endl;//0x61ff00
+        cout << &ref[1] << endl;//0x61ff00
     
 
 - 레퍼런스 리턴하는 함수
@@ -34,19 +34,19 @@
 
     Case3 : 함수 지역변수를 외부에서 레퍼런스로 받기 >> 가능(다만 const 참조자로 받아야함) 
 
-    int ftn(){
-        int a = 3;
-        
-        cout << &a << endl; // 0x61fedc
-        return a;
-    }
+        int ftn(){
+            int a = 3;
+            
+            cout << &a << endl; // 0x61fedc
+            return a;
+        }
 
-    int main(){
-        const int& b = ftn();
+        int main(){
+            const int& b = ftn();
 
-        cout << &b << endl; // 0x61ff08
-        // cout << sizeof(a) << endl; >> error
-    }
+            cout << &b << endl; // 0x61ff08
+            // cout << sizeof(a) << endl; >> error
+        }
 
 
 2. 참조자 vs 포인터

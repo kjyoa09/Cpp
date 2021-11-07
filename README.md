@@ -103,10 +103,6 @@ int main(){
 
 '''
 
-# include <iostream>
-
-using namespace std;
-
 int main(){
     int arr_size;
     cout << "arr size : ";

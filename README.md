@@ -60,7 +60,71 @@
 
 - 참조자는 메모리 상에 존재하지 않을 수도 있다. >> 포인터는 메모리 차지.
 
+### Chap 3 : 메모리 관리
 
+1. new & delete
+
+'''
+
+int main(){
+    int *p = new int;
+    *p = 10;
+
+    cout << *p << endl;
+    cout << &p << endl;
+
+    delete p;
+    return 0;
+    
+}
+
+'''
+
+new >> int 크기의 공간을 할당하여 그 주소값을 p에 넣음.
+delete >> 할당된 공간 해제(new를 통해 할당한 공간만 가능)
+
+'''
+
+int main(){
+    int p = 10;
+
+    cout << p << endl;
+    cout << &p << endl;
+
+    delete p; >> error
+    delete &p; >> 가능하긴 한데 Heap이 아닌 공간을 해제한다는 경고 메세지;;; >> 컴파일러에 따라 다른가..?
+    return 0;
+    
+}
+
+'''
+
+2. new로 배열 할당하기
+
+'''
+
+# include <iostream>
+
+using namespace std;
+
+int main(){
+    int arr_size;
+    cout << "arr size : ";
+    cin >> arr_size;
+    int *list = new int[arr_size];
+    for (int i = 0; i < arr_size; i++){
+        cin >> list[i];
+    }
+    
+    for (int i = 0; i < arr_size; i++){
+        cout << i << "th element of list : " << list[i] << endl;
+    }
+
+    return 0;
+}
+
+
+'''
 ## Coding Test
 ### programmers
 #### level 1

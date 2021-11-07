@@ -65,18 +65,17 @@
 1. new & delete
 
 '''
-int main(){
-    int *p = new int;
-    *p = 10;
+    int main(){
+        int *p = new int;
+        *p = 10;
 
-    cout << *p << endl;
-    cout << &p << endl;
+        cout << *p << endl;
+        cout << &p << endl;
 
-    delete p;
-    return 0;
-    
-}
-
+        delete p;
+        return 0;
+        
+    }
 '''
 
 new >> int 크기의 공간을 할당하여 그 주소값을 p에 넣음.
@@ -84,15 +83,15 @@ delete >> 할당된 공간 해제(new를 통해 할당한 공간만 가능)
 
 '''
 
-int main(){
-    int p = 10;
+    int main(){
+        int p = 10;
 
-    cout << p << endl;
-    cout << &p << endl;
+        cout << p << endl;
+        cout << &p << endl;
 
-    delete p; >> error
-    delete &p; >> 가능하긴 한데 Heap이 아닌 공간을 해제한다는 경고 메세지;;; >> 컴파일러에 따라 다른가..?
-    return 0;
+        delete p; >> error
+        delete &p; >> 가능하긴 한데 Heap이 아닌 공간을 해제한다는 경고 메세지;;; >> 컴파일러에 따라 다른가..?
+        return 0;
     
 }
 

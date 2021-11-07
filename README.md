@@ -10,7 +10,7 @@
 
 - 참조자의 참조자, 참조자의 배열, 참조자의 포인터 불가능
 
-'''
+
 
     int& arr[2] = {a,b}; >> error
 
@@ -25,7 +25,7 @@
     cout << &arr[1] << endl;//0x61ff00
     cout << &ref[1] << endl;//0x61ff00
     
-'''
+
 - 레퍼런스 리턴하는 함수
 
     Case1 : 외부 변수를 받아서 레퍼런스 리턴 >> 가능
@@ -33,8 +33,6 @@
     Case2 : 함수 내 지역변수 레퍼런스 리턴 >> 불가능
 
     Case3 : 함수 지역변수를 외부에서 레퍼런스로 받기 >> 가능(다만 const 참조자로 받아야함) 
-
-'''
 
     int ftn(){
         int a = 3;
@@ -50,7 +48,6 @@
         // cout << sizeof(a) << endl; >> error
     }
 
-'''
 
 2. 참조자 vs 포인터
 
@@ -80,16 +77,16 @@
 
     delete >> 할당된 공간 해제(new를 통해 할당한 공간만 가능)
 
-    int main(){
-        int p = 10;
+        int main(){
+            int p = 10;
 
-        cout << p << endl;
-        cout << &p << endl;
+            cout << p << endl;
+            cout << &p << endl;
 
-        delete p; >> error
-        delete &p; >> 가능하긴 한데 Heap이 아닌 공간을 해제한다는 경고 메세지;;; >> 컴파일러에 따라 다른가..?
-        return 0;
-        }
+            delete p; >> error
+            delete &p; >> 가능하긴 한데 Heap이 아닌 공간을 해제한다는 경고 메세지;;; >> 컴파일러에 따라 다른가..?
+            return 0;
+            }
 
 
 2. new로 배열 할당하기

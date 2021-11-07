@@ -76,9 +76,9 @@
         }
 
 
-new >> int 크기의 공간을 할당하여 그 주소값을 p에 넣음.
+    new >> int 크기의 공간을 할당하여 그 주소값을 p에 넣음.
 
-delete >> 할당된 공간 해제(new를 통해 할당한 공간만 가능)
+    delete >> 할당된 공간 해제(new를 통해 할당한 공간만 가능)
 
     int main(){
         int p = 10;
@@ -94,21 +94,21 @@ delete >> 할당된 공간 해제(new를 통해 할당한 공간만 가능)
 
 2. new로 배열 할당하기
 
-    int main(){
-        int arr_size;
-        cout << "arr size : ";
-        cin >> arr_size;
-        int *list = new int[arr_size];
-        for (int i = 0; i < arr_size; i++){
-            cin >> list[i];
-        }
-    
-        for (int i = 0; i < arr_size; i++){
-            cout << i << "th element of list : " << list[i] << endl;
-        }
+        int main(){
+            int arr_size;
+            cout << "arr size : ";
+            cin >> arr_size;
+            int *list = new int[arr_size];
+            for (int i = 0; i < arr_size; i++){
+                cin >> list[i];
+            }
+        
+            for (int i = 0; i < arr_size; i++){
+                cout << i << "th element of list : " << list[i] << endl;
+            }
 
-        return 0;
-    }
+            return 0;
+        }
 
 
 ## Coding Test

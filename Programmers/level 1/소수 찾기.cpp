@@ -4,6 +4,7 @@ using namespace std;
 
 int solution(int n) {
     array<int,1000001> list = {0};
+    //array<int,n> list = {0}; >> error: non-type template argument is not a constant expression 
     int answer = 0;
     for(long long i = 2;i<1000;i++){
         if (list[i] == 0){

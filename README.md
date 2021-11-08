@@ -158,8 +158,8 @@
 
     특징 :
         캡슐화 >> 객체의 인스턴스 변수에 직접 접근하지 못함 즉 인스턴스 메소드를 통해 간접으로 조절해야 함
-            animal.food += 100; // X
-            animal.increase_food(100); // O
+                animal.food += 100; // X
+                animal.increase_food(100); // O
         
     클래스 >> 설계도
         

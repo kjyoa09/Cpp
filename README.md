@@ -130,6 +130,72 @@
             cout << "external 2 : " << &a << endl; // 4
             return 0;
         }
+
+### Chap 4 : 객체 지향 프로그래밍
+
+1. 객체란?
+    
+    변수들과 참고 자료들로 이루어진 소프트웨어 덩어리.
+
+        typedef struct Animal{
+            char name[30]; // 이름
+            int age; // 나이
+
+            int health // 체력
+            int food // 배부른 정도
+            int clean // 청결 상태
+        } Animal;
+
+        play(list[play_with])
+
+    play 함수에 인자로 전달하는 것이 불필요해보임
+
+        Animal animal;
+        animal.play();
+        animal.sleep();
+    
+    이런식으로 코딩하는 것이 좀더 좋지 않을까? >> 즉 객체 자체가 자신의 정보[인스턴스 변수]를 적절한 처리[인스턴스 메소드]를 할 수 있는 
+
+    특징 :
+        캡슐화 >> 객체의 인스턴스 변수에 직접 접근하지 못함 즉 인스턴스 메소드를 통해 간접으로 조절해야 함
+            animal.food += 100; // X
+            animal.increase_food(100); // O
+        
+    클래스 >> 설계도
+        
+     
+        class Animal{
+            private:
+                int food; // 맴버 변수
+                int weight;// 맴버 변수
+            
+            public:
+            void set_animal(int _food, int _weight){// 맴버 함수
+                food = _food;
+                weight = _weight;
+            }
+            
+            void increase_food(int inc){
+                food += inc;
+                weight += (inc/3);
+            }
+
+            void view_stat(){
+                cout << "이 동물의 food : " << food << endl;
+                cout << "이 동물의 weight : " << weight << endl; 
+            }
+        };
+
+        int main(){
+            Animal animal;
+            animal.set_animal(100,50);
+            animal.increase_food(30);
+
+            animal.view_stat();
+            return 0;
+        }
+    
+
 ## Coding Test
 ### programmers
 #### level 1

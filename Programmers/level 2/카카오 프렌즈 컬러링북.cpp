@@ -1,28 +1,16 @@
+
 #include <vector>
 #include <map>
 #include <iostream>
 #include <deque>
 
 /*
-1110
-1220
-1001
-0001
-0003
-0003
-*/
+// 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요. >> 안하면 통고 못함..
 
-/*
-1110
-1110
-0001
-0001
-0001
-0001
 */
 using namespace std;
 
-// 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
+
 
 vector<vector<bool>> maps;
 vector<int> answer;

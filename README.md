@@ -213,7 +213,7 @@
                 print('a');//char : a >>print(char x)없으면 int : 99 [최대한 비슷한 인자 함수로 호출]
                 print(1.1);//double : 1.1
                 return 0;
-        }
+            }
 
     - 단계 >> 아래 과정을 전부 진행해도 맞는 타입이 없거나 같은 단계에서 두개 이상에 조건 이상이 만족하는 경우 ambiguous error
 
@@ -231,24 +231,24 @@
         4) 유저 정의된 타입 변환으로 일치하는 것을 찾는다
 
 
-            // 오류 안 나는데;;
+                // 오류 안 나는데;;
 
-            #include <iostream>
+                #include <iostream>
 
-            //void print(int x){std::cout << "int : " << x << std::endl;}
-            //void print(int x){std::cout << "int : " << x << std::endl;}
-            void print(char x){std::cout << "char : " << x << std::endl;}
-            // void print(double x){std::cout << "double : " << x << std::endl;}
+                //void print(int x){std::cout << "int : " << x << std::endl;}
+                //void print(int x){std::cout << "int : " << x << std::endl;}
+                void print(char x){std::cout << "char : " << x << std::endl;}
+                // void print(double x){std::cout << "double : " << x << std::endl;}
 
-            int main(){
-                int a = 1;
-                char b = 'c';
-                double c = 3.2f;
+                int main(){
+                    int a = 1;
+                    char b = 'c';
+                    double c = 3.2f;
 
-                print(a);
-                print(b);
-                print(c);
-                return 0;}
+                    print(a);
+                    print(b);
+                    print(c);
+                    return 0;}
 
 
 ## Coding Test

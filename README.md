@@ -196,7 +196,60 @@
             animal.view_stat();
             return 0;
         }
-    
+
+2. 함수의 오버로딩(Overloading)
+
+    - C에서는 같은 함수 이름을 갖을 수 없음 >> C++에서는 가능[함수의 인자를 보고 판단] : 함수의 이름이 같더라도 인자가 다르면 다른 함수라 판단.
+
+        #include <iostream>
+        
+        void print(int x){std::cout << "int : " << x << std::endl;}
+        //void print(int x){std::cout << "int : " << x << std::endl;} error:: 'void print(int)' previously defined here
+        void print(char x){std::cout << "char : " << x << std::endl;}
+        void print(double x){std::cout << "double : " << x << std::endl;}
+
+        int main(){
+            print(1); // int : 1
+            print('a');//char : a >>print(char x)없으면 int : 99 [최대한 비슷한 인자 함수로 호출]
+            print(1.1);//double : 1.1
+            return 0;
+       }
+
+    - 단계 >> 아래 과정을 전부 진행해도 맞는 타입이 없거나 같은 단계에서 두개 이상에 조건 이상이 만족하는 경우 ambiguous error
+
+        1) 자신과 타입이 정확히 일치하는 함수
+        2) 1단계를 만족하는 함수가 없을 경우 
+            - Char, Unsigned char, short >> int 변환
+            - Unsigned short는 int의 크기에 따라 int 혹은 Unsigned int로 변환
+            - Float은 double
+            - Enum은 int 변환
+        3) 2단계도 만족하는 함수가 없을 경우
+            - 임의의 숫자 타입은 다른 숫자 타입으로 변환 (float -> int)
+            - Enum도 임의의 숫자 타입으로 변환
+            - 0은 포인터 타입이나 숫자 타입으로 변환된 0은 포인터 타입이나 숫자 타입으로 변환
+            - 포인터는 void 포인터로 변환
+        4) 유저 정의된 타입 변환으로 일치하는 것을 찾는다
+
+
+            // 오류 안 나는데;;
+
+            #include <iostream>
+
+            //void print(int x){std::cout << "int : " << x << std::endl;}
+            //void print(int x){std::cout << "int : " << x << std::endl;}
+            void print(char x){std::cout << "char : " << x << std::endl;}
+            // void print(double x){std::cout << "double : " << x << std::endl;}
+
+            int main(){
+                int a = 1;
+                char b = 'c';
+                double c = 3.2f;
+
+                print(a);
+                print(b);
+                print(c);
+                return 0;}
+
 
 ## Coding Test
 ### programmers

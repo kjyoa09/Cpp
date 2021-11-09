@@ -24,7 +24,8 @@ void make(string numbers, string num){
 }
 
 int solution(string numbers) {
-    vector<bool> che(10000000,true);
+    vector<bool> che(10000000,true);//vector 초기화
+    
     L.assign(numbers.size(),true);
     int answer = 0;
     che[1] = false;

@@ -201,19 +201,19 @@
 
     - C에서는 같은 함수 이름을 갖을 수 없음 >> C++에서는 가능[함수의 인자를 보고 판단] : 함수의 이름이 같더라도 인자가 다르면 다른 함수라 판단.
 
-        #include <iostream>
-        
-        void print(int x){std::cout << "int : " << x << std::endl;}
-        //void print(int x){std::cout << "int : " << x << std::endl;} error:: 'void print(int)' previously defined here
-        void print(char x){std::cout << "char : " << x << std::endl;}
-        void print(double x){std::cout << "double : " << x << std::endl;}
+            #include <iostream>
+            
+            void print(int x){std::cout << "int : " << x << std::endl;}
+            //void print(int x){std::cout << "int : " << x << std::endl;} error:: 'void print(int)' previously defined here
+            void print(char x){std::cout << "char : " << x << std::endl;}
+            void print(double x){std::cout << "double : " << x << std::endl;}
 
-        int main(){
-            print(1); // int : 1
-            print('a');//char : a >>print(char x)없으면 int : 99 [최대한 비슷한 인자 함수로 호출]
-            print(1.1);//double : 1.1
-            return 0;
-       }
+            int main(){
+                print(1); // int : 1
+                print('a');//char : a >>print(char x)없으면 int : 99 [최대한 비슷한 인자 함수로 호출]
+                print(1.1);//double : 1.1
+                return 0;
+        }
 
     - 단계 >> 아래 과정을 전부 진행해도 맞는 타입이 없거나 같은 단계에서 두개 이상에 조건 이상이 만족하는 경우 ambiguous error
 

@@ -250,6 +250,36 @@
                     print(c);
                     return 0;}
 
+    - Class >> 굳이 class 내부에서 정의하지 않고 밖에서도 할 수 있음
+
+    - 디폴트 생성자(Default constructor)
+
+        명시적으로 정의하지 않았을 경우 컴파일러가 자동으로 추가해주는 생성자
+
+            class Date{
+                private:
+                    int year_;
+                    int month_;
+                    int day_;
+
+                public:
+                    void SetDate(int year, int month, int date);
+                    void AddYear(int inc);
+                    void Addmonth(int inc);
+                    void Addday(int inc);
+                    void ShowDate();
+                    
+                    int getCurrentMonthToalDays(int year, int month);
+
+                // 생성자 (constructor) >> 객체 생성시 자동으로 호출되는 함수.
+                Date(int year, int month, int day){
+                    year_ = year;
+                    month_ = month;
+                    day_ = day;
+                } 
+
+            };
+
 
 ## Coding Test
 ### programmers

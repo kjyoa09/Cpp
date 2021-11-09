@@ -4,7 +4,7 @@ using namespace std;
 
 int solution(vector<int> people, int limit) {
     int answer = 0,lt = 0, rt = people.size()-1;
-    sort(people.begin(),people.end(),greater<int>());
+    sort(people.rbegin(),people.rend());
     while (lt<=rt){
         answer++;
         if (rt==lt){break;}

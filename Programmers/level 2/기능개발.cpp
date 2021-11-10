@@ -6,12 +6,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     int day = 0,cnt = 0;
     for (int i = 0; i < progresses.size(); i ++){
         cnt = 0;
-        if ((100 - progresses[i] - speeds[i] * day) % speeds[i] > 0){
-            day +=(int)(100 - progresses[i] - speeds[i] * day)/speeds[i] + 1;
-        }
-        else {
-            day +=(int)(100 - progresses[i] - speeds[i] * day)/speeds[i];
-        }
+        day +=(int)(99 - progresses[i] - speeds[i] * day)/speeds[i] + 1;
 
         while (true){
             if (progresses[i] + speeds[i] * day >= 100){

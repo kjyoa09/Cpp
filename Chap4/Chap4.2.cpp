@@ -1,7 +1,7 @@
 
 #include <iostream>
-
-//void print(int x){std::cout << "int : " << x << std::endl;}
+// call of overloaded 'print(double&)' is ambiguous
+// void print(int x){std::cout << "int : " << x << std::endl;}
 //void print(int x){std::cout << "int : " << x << std::endl;}
 void print(char x){std::cout << "char : " << x << std::endl;}
 // void print(double x){std::cout << "double : " << x << std::endl;}

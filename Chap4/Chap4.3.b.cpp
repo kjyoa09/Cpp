@@ -4,6 +4,7 @@ A : b : Simple_test()
 B : b : Simple_test 지역이 사라지면서 소멸자 호출
 B : a : Main 함수 소멸과 함께 소멸자 호출 
 
+Default 소멸자.. > 어떻게 작동함,..?
 */
 
 #include <string.h>

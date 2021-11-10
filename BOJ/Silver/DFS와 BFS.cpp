@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <queue>
+#include <stdio.h> // scanf
+#include <iostream> //cout
+#include <vector> // map
+#include <algorithm> // sort
+#include <queue> // bfs
 
 using namespace std;
 

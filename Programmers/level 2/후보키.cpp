@@ -4,7 +4,6 @@
 #include <map>
 #include <queue>
 #include <set>
-
 using namespace std;
 
 
@@ -42,9 +41,9 @@ int solution(vector<vector<string>> relation) {
         int now = que.front();
         // cout << "Now : " << now << endl;
         que.pop();
-        
+
         for (int c = 0; c< C; c++){
-            
+
             if (now & 1<<c){continue;}
             bin = now | 1<<c;
             bool flag = false;
@@ -75,7 +74,7 @@ int solution(vector<vector<string>> relation) {
             }
         }   
     }
-    
-    
+
+
     return ans;
 }

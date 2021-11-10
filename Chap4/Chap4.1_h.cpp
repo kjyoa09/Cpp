@@ -41,7 +41,7 @@ int Date::getCurrentMonthToalDays(int year, int month){
 
 void Date::Addday(int inc){
     while (true)
-    {int current_month_total_days = getCurrentMonthToalDays(year_,mont_);
+    {int current_month_total_days = getCurrentMonthToalDays(year_,month_);
 
     if(day_ + inc <= current_month_total_days){day_+= inc; return;}
     else{inc-= (current_month_total_days-day_ + 1);Addmonth(1);}

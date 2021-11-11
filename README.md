@@ -490,6 +490,7 @@
             pc2.show_status();
         }
 
+    4.Static & Const & this
 ## Coding Test
 ### programmers
 #### level 1

@@ -3,7 +3,7 @@
 using namespace std;
 
 class A{
-    int x;
+    int x = 1;
 
     public:
         A(int c) : x(c){};

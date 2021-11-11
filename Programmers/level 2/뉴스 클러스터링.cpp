@@ -2,7 +2,7 @@
 #include <map>
 #include <set>
 #include <algorithm>
-
+#include <vector>
 using namespace std;
 
 map<string,int> dic1, dic2;

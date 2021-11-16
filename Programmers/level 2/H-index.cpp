@@ -1,4 +1,5 @@
 #include<algorithm>
+#include<vector>
 using namespace std;
 int solution(vector<int> citations) {
     sort(citations.rbegin(),citations.rend());

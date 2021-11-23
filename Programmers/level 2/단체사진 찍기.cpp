@@ -11,9 +11,7 @@ int ans;
 
 void dfs(string p,vector<bool>& tf,vector<char>& n, map<char,map<char,list<int>>>& IF,map<char,int>& dic){
     if (p.size() == 8){
-
         for (int x = 0; x < 8; x++){
-            int yy = 0;
             for (int y = x+1; y < 8; y++){
                 char X = p[x], Y = p[y];
                 if (dic[p[x]] > dic[p[y]])swap(X,Y);
@@ -24,7 +22,6 @@ void dfs(string p,vector<bool>& tf,vector<char>& n, map<char,map<char,list<int>>
                         break;
                     }
                 }
-                yy = y;
                 if (TF){
                     // cout << x << " " << y << endl;
                     // cout << "A" << p[x] << " " << p[y] << endl;
